@@ -1,0 +1,204 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url("Grid.png");
+    background-size: cover;        
+    background-position: center;  
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+  
+  
+  nav{
+      background: rgb(142, 212, 235);
+      height: 80px;
+      width: 100%;
+      margin-bottom: 100px;
+      box-shadow:  0px 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .logo img {
+    height: 60px;      
+    margin-left: 60px; 
+    vertical-align: middle;
+    margin-top: 15px;
+  }
+  
+  
+  nav ul{
+      float: right;
+      margin-right: 20x;
+      font-size: 17px;
+  }
+  
+  nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  }
+  
+  nav ul li a{
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 5px 20px;
+      border-radius: 7px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      transition: 0.5 ease;
+  }
+  
+  ul li a.active{
+    background-color: rgb(105, 66, 66) ;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul li a:hover:not(.active){
+  background-color: pink;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+   /* cat icon */
+  .nav-item {
+    position: relative;
+  }
+  
+  .cat{ 
+    width: 55px;  
+    position: absolute;
+    top: 22px;                
+    left: 50%;
+    transform: translateX(-50%) translateY(20px) scale(0.8);
+    opacity: 0;
+    transition: 0.35s ease;
+    pointer-events: none;     
+  }
+  
+  .nav-item:hover .cat{
+    transform: translateX(-50%) translateY(-35px) scale(1);
+    opacity: 1;
+  }
+
+ /*Flashcards*/
+ button{
+  padding: 10px;
+  margin-top: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: lightskyblue;
+  border: 1px solid lightblue;
+  border-radius: 6px;
+ }
+
+ .top-button {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 20px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.top-button button {
+  padding: 10px 20px;
+  background-color: lightskyblue;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.top-button button:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+ .container{
+  width: 95%;
+  margin: auto;
+ }
+
+.create-box{
+  width: 450px;
+  margin: 80px auto;
+  margin-top: 10px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgb(249, 249, 249);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)；
+}
+
+.create-box textarea{
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+}
+
+.create-box button{
+  width: fit-content;
+}
+
+.flashcards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.flashcard{
+  width: 350px;
+  height: 250px;
+  word-wrap: break-word;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.flashcard h2{
+  font-size: 1rem;
+}
+
+@media(max-width:768px){
+  .flashcard{
+    margin: auto;
+  }
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  .create-box{
+    width: 100%;
+  }
+
+  .flashcard{
+    width: 100%;
+  }
+}

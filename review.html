@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Review</title>
+        <link rel="stylesheet" href="style3(review).css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <nav>
+            
+            <a href="Mwebpage.html" class="logo">
+                <img src="FlipCat.png" alt="FlipCat Logo">
+            </a>
+            
+                <ul>
+                    <li class="nav-item">
+                        <a class="active" href="Mwebpage.html">Home</a>
+                        <img src="cat.png" class="cat">                   
+                     </li>
+
+                    <li class="nav-item">
+                        <a href="studymode.html">Study Mode</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="review.html">Review</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="Quiz.html">Quiz</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="loginpage.html">Login</a>
+                        <img src="cat.png" class="cat">
+                    </li>
+                </ul>
+    </nav>
+
+    
+    <div class="container">
+        <div class="create-box">
+            <h2 style="text-align: center">Create Flashcard</h2>
+            <label for="question">Question</label>
+            <textarea id="question"></textarea> <br>
+            <label for="answer">Answer</label>
+            <textarea id="answer"></textarea> 
+            <div>
+                <button onclick="addFlashcard()">Save</button>
+                <button onclick="hideCreateBox()">Close</button>
+            </div>
+            </div>
+
+            <div class="top-button">
+                <button onclick="showCreateCardBox()">Add New Card</button>
+                <button onclick="delFlashcards()">Delete Card</button>
+            </div>
+            <div class="flashcards"></div>
+            </div>
+    <script src="scirpt3(review).js"> </script>
+    </body>
+    </html>

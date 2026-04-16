@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>StudyMode</title>
+        <link rel="stylesheet" href="style2(studymode).css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <nav>
+            
+            <a href="Mwebpage.html" class="logo">
+                <img src="FlipCat.png" alt="FlipCat Logo">
+            </a>
+            
+                <ul>
+                    <li class="nav-item">
+                        <a class="active" href="Mwebpage.html">Home</a>
+                        <img src="cat.png" class="cat">                   
+                     </li>
+
+                    <li class="nav-item">
+                        <a href="studymode.html">Study Mode</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="review.html">Review</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="Quiz.html">Quiz</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="loginpage.html">Login</a>
+                        <img src="cat.png" class="cat">
+                    </li>
+                </ul>
+    </nav>
+
+    <!-- slide -->
+
+    <div class="container">
+
+        <div class="card-wrapper">
+            <div class="flashcard" id="flashcard">
+                <div class="front" id="card-front">What is the largest planet in our solar system?</div>
+                <div class="back" id="card-back">Jupiter</div>
+            </div>
+        </div>
+    
+        <div class="controls">
+            <button onclick="prevcard()">Prev</button>
+            <span id="Cardcount">1 / 3</span>
+            <button onclick="nextcard()">Next</button>
+        </div>
+    
+    </div>
+    
+    <script src="script2(studymode).js"></script>
+    </body>
+    </html>

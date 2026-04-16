@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FlipCard</title>
+        <link rel="stylesheet" href="style1(home).css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <nav>
+            
+            <a href="Mwebpage.html" class="logo">
+                <img src="FlipCat.png" alt="FlipCat Logo">
+            </a>
+            
+                <ul>
+                    <li class="nav-item">
+                        <a class="active" href="Mwebpage.html">Home</a>
+                        <img src="cat.png" class="cat">                   
+                     </li>
+
+                    <li class="nav-item">
+                        <a href="studymode.html">Study Mode</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="review.html">Review</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="Quiz.html">Quiz</a>
+                        <img src="cat.png" class="cat">
+                        </li>
+
+                    <li class="nav-item">
+                    <a href="loginpage.html">Login</a>
+                        <img src="cat.png" class="cat">
+                    </li>
+                </ul>
+    </nav>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="slide1.png">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="slide2.png">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="slide3.png">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+<h1 class="title">Welcome to FlipCat</h1>
+<p class="subtitle">Start studying smarter with cute flashcards</p>
+
+<div class="row" style="text-align: center;">
+    <div class="column">
+      <h1>Study Mode</h1>
+      <p>A calm mode where you learn each card one by one. <br>
+        Take your time, flip the card, and focus on understanding the answer.</p>
+        <i class="fa-solid fa-graduation-cap" style="color: #63E6BE; font-size: 60px;"></i>
+    </div>
+    <div class="column">
+      <h1>Review Mode</h1>
+      <p>Go through all the cards quickly to refresh what you learned. <br>
+        It's perfect for checking what you still remember.</p>
+        <i class="fa-solid fa-book-open" style="color: #496492; font-size: 60px"></i>
+    </div>
+    <div class="column">
+      <h1>Quiz</h1>
+      <p>Test yourself without seeing the answers first. <br>
+        Choose the correct option or type your answer <br>
+        to see how well you really know the topic.</p>
+        <i class="fa-solid fa-award" style="color: #FFD43B; font-size: 60px"></i>
+    </div>
+  </div>
+
+<h1 class="hero-title">Ready to give it a try?</h1>
+<p class="hero-subtext">You can start your learning journey now!</p>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    
+    setInterval(function() {plusSlides(1);}, 3000);
+    </script>
+    
+</body>
+</html>

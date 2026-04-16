@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="style(login).css"> 
+        </head>
+        
+        <body>
+            <div class="center">
+                <h1>Login</h1>
+
+                <form onsubmit="return loginUser();">
+                    
+                <div class="txt_field">
+                    <input type="text"id="username" required>
+                    <label >Username</label>
+                </div>
+
+                <div class="txt_field">
+                            <input type="password" id="password" required>
+                            <label >Password</label>
+                            </div> 
+                            <input type="submit" value="Login">
+                           
+                </form>
+            </div>
+
+            <script>
+                function loginUser() {
+                    let user = document.getElementById("username").value;
+                    let pass = document.getElementById("password").value;
+
+                    if (user === "Samson" && pass === "0513") {
+                alert("Login successful!");
+
+                setTimeout(function (){
+                window.location.href = "Mwebpage.html"; 
+                }, 150);
+
+                return false;
+
+            } else {
+                alert("Incorrect username or password.");
+                return false; 
+            }
+                }
+                </script>
+            </body>
+    </html>

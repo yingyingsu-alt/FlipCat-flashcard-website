@@ -1,0 +1,209 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("Grid.png");
+  background-size: cover;        
+  background-position: center;  
+  background-repeat: no-repeat; 
+  min-height: 100vh;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+
+nav{
+    background: rgb(142, 212, 235);
+    height: 80px;
+    width: 100%;
+    margin-bottom: 100px;
+    box-shadow:  0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.logo img {
+  height: 60px;      
+  margin-left: 60px; 
+  vertical-align: middle;
+  margin-top: 15px;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 20x;
+    font-size: 17px;
+}
+
+nav ul li{
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 5px 20px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: 0.5 ease;
+}
+
+ul li a.active{
+    background-color: rgb(105, 66, 66) ;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul li a:hover:not(.active){
+  background-color: pink;
+  color: white;
+  text-transform: uppercase;
+}
+
+ /* cat image */
+.nav-item {
+  position: relative;
+}
+
+.cat{ 
+  width: 55px;  
+  position: absolute;
+  top: 22px;                
+  left: 50%;
+  transform: translateX(-50%) translateY(20px) scale(0.8);
+  opacity: 0;
+  transition: 0.35s ease;
+  pointer-events: none;     
+}
+
+.nav-item:hover .cat{
+  transform: translateX(-50%) translateY(-35px) scale(1);
+  opacity: 1;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: -90px auto 0 auto;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;     
+  object-fit: cover;   
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(2, 2, 2, 1);   
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*columns*/
+.row{
+  float: left;
+  display: flex;
+  gap: 150px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.column {
+padding: 20px;
+width: 80%;
+height: 300px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+background: rgb(246, 246, 231);
+}
+
+.column h1{
+  color: rgb(207, 155, 226);
+}
+
+.column p{
+  color: #5b5a5a;
+}
+
